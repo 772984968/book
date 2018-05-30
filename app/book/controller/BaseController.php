@@ -5,9 +5,9 @@ use think\Controller;
 class BaseController extends Controller{
     public function _initialize(){
         $this->assign('jinhua',db('list')->where('type_id',2)->order('comment','desc')->find());
-        $this->assign('allsee',db('list')->where('type_id',2)->order('zan desc','comment')->limit(8)->select());
-        $this->assign('allhot',db('list')->where('type_id',2)->order('comment desc','date')->limit(8)->select());
-        $this->assign('oldhot',db('list')->where('type_id',2)->order('comment desc','date asc')->limit(8)->select());
+        $this->assign('allsee',db('list')->where('type_id',2)->order('zan desc,comment')->limit(8)->select());
+        $this->assign('allhot',db('list')->where('type_id',2)->order('comment desc,date')->limit(8)->select());
+        $this->assign('oldhot',db('list')->where('type_id',2)->order('comment desc,date asc')->limit(8)->select());
     }
     //关注人
     public function attention(){
