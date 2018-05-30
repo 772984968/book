@@ -1,0 +1,423 @@
+---------------------------------------------------------------
+[ 2018-03-29T00:23:48+08:00 ] 172.18.79.84 114.215.45.101 GET /
+[ info ] 39.104.63.80:80/ [运行时间：0.031165s][吞吐率：32.09req/s] [内存消耗：2,332.11kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '39.104.63.80:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000462s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000797s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000381s ]
+---------------------------------------------------------------
+[ 2018-03-29T03:05:23+08:00 ] 172.18.79.84 123.125.67.163 GET /index.php
+[ info ] 39.108.115.229/index.php [运行时间：0.031119s][吞吐率：32.13req/s] [内存消耗：2,332.89kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'zh-cn,zh-tw',
+  'accept-encoding' => 'gzip',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36',
+  'connection' => 'close',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000573s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000871s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000447s ]
+---------------------------------------------------------------
+[ 2018-03-29T05:46:56+08:00 ] 172.18.79.84 60.191.52.254 HEAD /
+[ info ] wap.ip138.com/ [运行时间：0.031214s][吞吐率：32.04req/s] [内存消耗：2,331.95kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'proxy-connection' => 'keep-alive',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'host' => 'wap.ip138.com',
+  'user-agent' => 'Java/1.8.0_77',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000439s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000404s ]
+---------------------------------------------------------------
+[ 2018-03-29T08:33:30+08:00 ] 172.18.79.84 59.110.6.177 GET /
+[ info ] 39.104.15.200:80/ [运行时间：0.030449s][吞吐率：32.84req/s] [内存消耗：2,332.11kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '39.104.15.200:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000474s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000833s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000388s ]
+---------------------------------------------------------------
+[ 2018-03-29T16:19:47+08:00 ] 172.18.79.84 114.215.45.101 GET /
+[ info ] 39.104.30.12:80/ [运行时间：0.033052s][吞吐率：30.26req/s] [内存消耗：2,332.11kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '39.104.30.12:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000572s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000433s ]
+---------------------------------------------------------------
+[ 2018-03-29T16:30:07+08:00 ] 172.18.79.84 80.82.78.50 GET /cache/global/img/gs.gif
+[ info ] www.baidu.com/cache/global/img/gs.gif [运行时间：0.013071s][吞吐率：76.51req/s] [内存消耗：1,141.56kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'cache',
+    1 => 'global',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'if-modified-since' => 'Thu, 19 Apr 2012 09:51:20 GMT',
+  'user-agent' => 'Mozilla',
+  'host' => 'www.baidu.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T18:22:28+08:00 ] 172.18.79.84 119.137.55.147 GET /
+[ info ] 39.108.115.229/ [运行时间：0.029410s][吞吐率：34.00req/s] [内存消耗：2,333.52kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000410s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000395s ]
+---------------------------------------------------------------
+[ 2018-03-29T22:15:13+08:00 ] 172.18.79.84 188.19.140.29 GET /
+[ info ] 39.108.115.229:80/ [运行时间：0.029041s][吞吐率：34.43req/s] [内存消耗：2,331.97kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '39.108.115.229:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000444s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000378s ]
+---------------------------------------------------------------
+[ 2018-03-29T23:03:31+08:00 ] 172.18.79.84 34.205.65.137 GET /
+[ info ] 39.108.115.229/ [运行时间：0.029376s][吞吐率：34.04req/s] [内存消耗：2,332.86kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.2;en-US) AppleWebKit/537.32.36 (KHTML, live Gecko) Chrome/52.0.3068.79 Safari/537.32',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000460s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000816s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000413s ]

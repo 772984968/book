@@ -1,0 +1,287 @@
+﻿{include file="common/header"/}
+    <!--中间内容-->
+    <div class="j-content">
+        <div class="g-bd f-cb">
+
+
+            <div class="g-mn">
+
+    <div class="j-r-c">
+        <!--标签导航-->
+        <div class="j-r-nav">
+            <ul>
+                <li  class="{$pub}" ><a
+                        href="#">资料修改</a></li>
+            </ul>
+        </div>
+        <!--帖子列表-->
+        <div class="j-r-list">
+        <form action="{:url('user/person')}" method="post">
+ <div class="j-r-nav">
+            <ul>
+                <li  class="" >用户名：<input name="name" type="text" value="{$user.name}"></li>
+				<input type="hidden" name="id" value="{$user.id}">
+            </ul>
+        </div>
+         <div class="j-r-nav">
+            <ul>
+                <li  class="" >自我简介：<input name="introduction" value="{$user.introduction}" type="text" size="60"></li>
+            </ul>
+        </div>
+           {if condition="$Think.session.uid==$user.id"}
+            <div class="j-r-nav">
+            <ul>
+                <li  class="" >用户密码：<input name="password" value="{$user.password}" type="password"></li>
+            </ul>
+        </div>
+
+           <div class="j-r-nav">
+            <ul>
+                <li  class="" >用户头像：<img src="{$user.head}" name="head" id="userimage" height="100" width="100">
+ 				<input type="hidden" name="head" value="{$user.head}" id="head">
+                <input type="file" name="image" id="fileUpload"></li>
+            </ul>
+        </div>
+
+              <div class="j-r-nav">
+            <ul>
+                <li  class="" >资料更新：<input type="submit" value="更新资料"></li>
+            </ul>
+        </div>
+        {/if}
+        </form>
+        </div>
+        <div class="loading" id="scrollPageLoading" style="display: none;">
+            <div class="loading-c">
+                <i class="icon-loading-gif"></i>
+            </div>
+        </div>
+        <p id="commentNoMoreMsg" class="f-tac no-more-comment" style=" display: none;">“已显示全部内容”</p>
+    </div>
+    <!-- 个人页模板 -->
+            </div>
+
+            <!--right -->
+            <div class="g-sd">
+
+    <div class="j-l-c">
+        <!--个人主页-->
+        <div class="p-age">
+            <div class="p-age-message" id="userInfo">
+                <div class="p-age-img">
+                    <a href="">
+                        <img class="p-logo" src="{$user.head}" alt=""/>
+                        <input type="hidden" id='userid' value="{$user.id}"/>
+                    </a>
+                </div>
+                <div class="p-age-mess">
+                    <div class="p-age-name">
+                        <a href="" class="p-age-netname">{$user.name}</a>
+                        <i class="icon-rank"></i>
+ {if condition="$Think.session.attentions==null"}
+                         <a href="javascript:attention();" class="focus" id="attention">+ 关注</a>
+{elseif condition="in_array($user.id,$Think.session.attentions)"}
+                        <a href="javascript:cancel();" class="focus cancel-focus j-un-follow"  id="cancel" style="">取消关注</a>
+
+{else /}
+                        <a href="javascript:attention();" class="focus" id="attention">+ 关注</a>
+
+{/if}
+                    </div>
+                    <div class="p-age-lein">
+                        <span class="level">等级：{$user.grade}</span>
+                        <span class="integral">积分：{$user.integer}</span>
+                    </div>
+                    <div class="signature"></div>
+                </div>
+            </div>
+            <div class="p-age-attente" id="userFollow">
+                <div class="p-age-attente-title">
+                    <span>关注（{$user.attention}）</span>
+                    <a href="{:url('user/follow',['uid'=>$user.id])}" class="p-age-all">全部</a>
+                </div>
+                <ul class="p-age-attente-con">
+                {volist name="$user_attentions" id="vo" empty='无关注人'}
+                <li>
+                <a href="{:url('user/topic',['uid'=>$vo.id])}">
+                <img class="follower-img" src="{$vo.head}" onerror="this.src='http://wimg.spriteapp.cn/profile/'" alt=""></a>
+                <a href="{:url('user/topic',['uid'=>$vo.id])}" class="follower-name">{$vo.name}</a></li>
+                {/volist}
+                </ul>
+           </div>
+            <div class="p-age-attente" id="userFans">
+                <div class="p-age-attente-title">
+                    <span>粉丝（{$user.fans}）</span>
+                    <a href="{:url('user/fans',['uid'=>$user.id])}" class="p-age-all">全部</a>
+                </div>
+              <ul class="p-age-attente-con">
+                {volist name="$user_fans" id="vo" empty='无关注人'}
+              <li>
+              <a href="{:url('user/topic',['uid'=>$vo.id])}">
+              <img class="follower-img" src="{$vo.head}" onerror="this.src='http://wimg.spriteapp.cn/profile/'" alt="">
+              </a>
+              <a href="{:url('user/topic',['uid'=>$vo.id])}" class="follower-name">{$vo.name}</a>
+             </li>
+              {/volist}
+              </ul>
+            </div>
+        </div>
+        <!--投稿审稿-->
+        <!--投稿-->
+<div class="j-sent">
+    <a href="{:url('user/publish')}" onclick="jie.gaSend('pc官网-点击发帖button','点击大发帖button','')" class="left icon-contribute">
+        <i class="icon-page-contribute"></i>发帖
+    </a>
+</div>
+
+
+        <!--大家的在看-->
+
+<div class="j-r-wrst j-all-like j-r-list j-everyone">
+    <div class="n-title">
+        <h2 class="u-tt u-tt-md">好书荐读网友都在看</h2>
+    </div>
+    <div class="j-list">
+        <div class="j-list-c">
+          {volist name="allsee" id="vo" empty="暂时没有数据" }
+                <div class="j-item">
+                <a href="{:url('index/detail',['id'=>$vo.id])}"
+                data-title="{$vo.biaoti}"
+                data-id="27260416"
+                data-date=""
+                data-time="">
+                <div class="j-item-img">
+                    <img src="{$vo.src}"
+                         class="lazy"
+                         data-original="{$vo.src}"
+                         alt="{$vo.biaoti}"/>
+                    <!--<div class="j-item-play">-->
+                        <!--<i class="icon-play"></i>-->
+                    <!--</div>-->
+                </div>
+                </a>
+                <div class="j-item-des">
+                    <a href="/detail-27260416.html">{$vo.biaoti}</a>
+                </div>
+            </div>
+{/volist}
+        </div>
+    </div>
+</div>
+</div>
+        <br/>
+    </div>
+            </div>
+        </div>
+    <div id="jDownloadVideo" style="display: none;"></div>
+<!--footer -->
+{include file="common/footer"/}
+<script src="__static__/Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="__static__/layui/layui.all.js"></script>
+     <script type="text/javascript">
+     layui.use('upload', function(){
+    	  var upload = layui.upload;
+    	  //执行实例
+    	  var uploadInst = upload.render({
+    	    elem: '#fileUpload' //绑定元素
+    	    ,url: "{:url('user/uploadImage')}" //上传接口
+    	    ,done: function(res){
+    	        if (res.code==1){
+    	            layer.msg(res.msg);
+    	            $("#head").attr('value',res.data.src);
+    	            $("#userimage").attr('src',res.data.src);
+    	             }else{
+    	              layer.msg(res.msg);
+    	        }
+    	           //上传完毕回调
+    	    }
+    	   ,accept:'images'
+    	    ,error: function(){
+    	        layer.msg('系统错误，上传失败，请重试！');
+    	           //请求异常回调
+    	    }
+    	  });
+    	});
+
+
+     function attention(){
+   	  $.ajax({
+		url:"{:url('base/attention')}",
+		type:'POST',
+		dataType:'json',
+		data:{'uid':$('#userid').attr('value')},
+		 success:function(data){
+			 if(data.code=='200'){
+					layer.msg(data.msg,{icon:1,time:1*1000});
+				}else{
+					layer.msg(data.msg,{icon:5});
+				}
+         },
+         error:function(data){
+        	 layer.msg('数据发送失败',{icon:5});
+         }
+
+	  });
+     }
+     function cancel(){
+    	 $.ajax({
+    			url:"{:url('base/cancel')}",
+    			type:'POST',
+    			dataType:'json',
+    			data:{'uid':$('#userid').attr('value')},
+    			 success:function(data){
+    				 if(data.code=='200'){
+    						layer.msg(data.msg,{icon:1,time:1*1000});
+    					}else{
+    						layer.msg(data.msg,{icon:5});
+    					}
+    	         },
+    	         error:function(data){
+    	        	 layer.msg('数据发送失败',{icon:5});
+    	         }
+
+    		  });
+
+     }
+     function del(){
+      	 $.ajax({
+ 			url:"{:url('base/del')}",
+ 			type:'POST',
+ 			dataType:'json',
+ 			data:{'listid':$('#listid').attr('value')},
+ 			 success:function(data){
+ 				 if(data.code=='200'){
+ 						layer.msg(data.msg,{icon:1,time:1*1000});
+ 					}else{
+ 						layer.msg(data.msg,{icon:5});
+ 					}
+ 	         },
+ 	         error:function(data){
+ 	        	 layer.msg('数据发送失败',{icon:5});
+ 	         }
+
+ 		  });
+     }
+     function commentsdel(){
+      	 $.ajax({
+ 			url:"{:url('base/commentsdel')}",
+ 			type:'POST',
+ 			dataType:'json',
+ 			data:{'commentsid':$('#commentsid').attr('value')},
+ 			 success:function(data){
+ 				 if(data.code=='200'){
+ 						layer.msg(data.msg,{icon:1,time:1*1000});
+ 					}else{
+ 						layer.msg(data.msg,{icon:5});
+ 					}
+ 	         },
+ 	         error:function(data){
+ 	        	 layer.msg('数据发送失败',{icon:5});
+ 	         }
+
+ 		  });
+     }
+     </script>
+
+
+</body>

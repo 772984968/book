@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+
+
+        <title>好书荐读－内涵段子，冷笑话，搞笑图片，成人笑话，不得姐分享社区，第1页</title>
+
+
+
+
+        <meta name="keywords" content="内涵段子,冷笑话,好书荐读,好书荐读官网,不得姐"/>
+
+
+
+
+        <meta name="description" content="好书荐读官网是一个在线发布和分享内涵段子、冷笑话，搞笑图片，成人笑话的热门社区，大家可以对爆笑的内涵图和其他玩家一起交流互动。"/>
+
+
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-stand"/>
+    <meta property="qc:admins" content="2241171675625452156375" />
+
+
+        <meta name="mobile-agent" content="format=html5;url=http://m.budejie.com/1"/>
+        <meta name="mobile-agent" content="format=xhtml;url=http://m.budejie.com/1"/>
+
+
+    <!--[if IE]>
+    <script src="__static__/Scripts/json2.min.js"></script>
+    <script src="__static__/Scripts/html5.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="http://wimg.spriteapp.cn/logo/favicon.ico"/>
+    <link rel="apple-touch-icon" href="http://mstatic.spriteapp.cn/xx/1/img/touchicon.png"/>
+    <link rel="stylesheet" href="__static__/Css/ui.css">
+    <script type="text/javascript">
+        if (!window.console) {
+            window.console = {
+                log: function () {
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="__static__/Css/page.css">
+
+
+    <link rel="stylesheet" href="__static__/Css/user.css">
+    <link rel="stylesheet" href="__static__/Css/index.css">
+
+</head>
+<body>
+<h1 style="display: none">
+    好书荐读－内涵段子，冷笑话，搞笑图片，成人笑话，不得姐分享社区
+</h1>
+<!-- 顶部 header -->
+<div class="j-header">
+    <div class="j-top">
+        <a href="{:url('index/index')}" class="logo">
+            <i class="icon-logo">
+                <img src="__static__/Picture/logo_new.png" alt="好书荐读" title="好书荐读官网">
+            </i>
+        </a>
+
+        <div class="link">
+            <!-- gaga type: 1  None -->
+            <a  class="[all]"  href="{:url('index/index')}">全部</a>
+            <a class="[video]" href="{:url('index/video')}">视频</a>
+            <a class="[images]" href="{:url('index/images')}">图片</a>
+            <a class="[text]" href="{:url('index/text')}">文字</a>
+            <a class="[voice]" href="{:url('index/voice')}">声音</a>
+            <a class="[hot]" href="{:url('index/hot')}">排行</a>
+        </div>
+{empty name="Think.session.name"}
+        <div class="login" id="jLoginBar">
+            <a href="javascript:login();">登录</a><em>|</em><a
+                href="javascript:register();">注册</a>
+        </div>
+       			     {else /}
+        <div class="login user-login" id="jUserLoginBar" style="">
+            <a href="{:url('user/topic',['uid'=>$Think.session.uid])}" id="jUserLoginName" style="max-width: 84px; overflow: hidden; height: 22px;">{$Think.session.name}</a>|&nbsp;
+            <i id="userNewsIcon" class="icon-msg"></i>
+            <a href="{:url('index/logout')}" id="jLoginExit">退出</a>
+            <a href="{:url('user/publish')}" class="j-post"
+               onclick="jie.gaSend('pc官网-点击发帖button','点击右上角发帖button','')">发帖</a>
+        </div>
+
+{/empty}
+    </div>
+</div>

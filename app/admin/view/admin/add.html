@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>菜单列表</title>
+<meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+<meta name="description"
+	content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+<link href="__static__/plugins/layui/css/layui.css" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico">
+<script src="__static__/js/jquery.min.js?v=2.1.4"></script>
+<script src="__static__/plugins/layui/layui.js"></script>
+</head>
+
+<body>
+<div class="layui-container"layui-bg-gray>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+  <legend>{$data['config']['add']['title']}</legend>
+</fieldset>
+<form class="layui-form" action="{:url($data['config']['add']['url'])}" method="post">
+			{volist name="data['option']" id="vo"}
+			{switch name=$vo['html']}
+			{case value="password" break="1"}
+				<!-- password -->
+				 <div class="layui-form-item">
+				    <label class="layui-form-label">{$vo['title']}</label>
+				    <div class="layui-input-inline">
+				      <input type="password" name="{$vo['key']}" lay-verify="" placeholder="请输入密码" autocomplete="off" class="layui-input">
+				    </div>
+				    <div class="layui-form-mid layui-word-aux">辅助文字</div>
+				  </div>
+			{/case}
+			<!-- select -->
+			{case value="select" break="1"}
+			<div class="layui-form-item">
+				<label class="layui-form-label">{$vo['title']}</label>
+				<div class="layui-input-inline">
+					<select name="{$vo['key']}" lay-verify="">
+					 {volist
+						name="vo['option']" id="select"}
+						<option value="{$select['id']}">{$select['level']}{$select['name']}</option>
+						{/volist}
+					</select>
+				</div>
+			</div>
+			{/case}
+			<!-- radio -->
+	{case value="radio" break="1"}
+			<div class="layui-form-item">
+				<label class="layui-form-label">{$vo['title']}</label>
+				<div class="layui-input-block">
+					{volist name="vo['option']" id="radio"} <input type="radio"
+						name="{$vo['key']}" value="{$radio['id']}"
+						title="{$radio['name']}" {notempty name="$radio['check']"}
+						checked="checked"{/notempty}> {/volist}
+				</div>
+			</div>
+			{/case}
+<!-- date -->
+{case value="date" break="1"}
+			<div class="layui-form-item">
+				<label class="layui-form-label">{$vo['title']}</label>
+				<div class="layui-input-block">
+					<div class="layui-input-inline">
+						<input class="layui-input" id="date" placeholder="yyyy-MM-dd"
+							type="text" name="{$vo['key']}">
+					</div>
+				</div>
+			</div>
+			{/case}
+<!-- checkbox -->
+{case value="checkbox" break="1"}
+ <div class="layui-form-item">
+    <label class="layui-form-label">{$vo['title']}</label>
+    <div class="layui-input-block">
+    	{volist name="vo['option']" id="checkbox"}
+      <input type="checkbox" name="{$vo['key']}[]" title="{$checkbox['name']}"
+      {notempty name="$checkbox['check']"}
+	  checked="checked"
+	  {/notempty} value="{$checkbox['id']}" >
+      {/volist}
+    </div>
+  </div>
+  {/case}
+<!-- 开关 -->
+{case value="switch" break="1"}
+ <div class="layui-form-item">
+    <label class="layui-form-label">{$vo['title']}</label>
+    <div class="layui-input-block">
+      <input type="checkbox" name="{$vo['key']}" lay-skin="switch" checked>
+    </div>
+  </div>
+  {/case}
+  {case value="textarea" break="1"}
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">文本域</label>
+    <div class="layui-input-block">
+      <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+    </div>
+  </div>
+  {/case}
+			{default/}
+	<div class="layui-form-item">
+    <label class="layui-form-label">{$vo['title']}</label>
+    <div class="layui-input-block">
+      <input type="text" name="{$vo['key']}" lay-verify="required" required="required" value="{$vo['value']}"   {notempty name="$vo['option']['placeholder']"}
+			placeholder="{$vo['option']['placeholder']}"
+	  {/notempty} autocomplete="off" class="layui-input">
+    </div>
+  </div>
+			{/switch}
+        	{/volist}
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+
+    </div>
+  </div>
+</form>
+  </div>
+<script>
+layui.use('form', function(){
+  var form = layui.form;
+  //监听提交
+  form.on('submit(formDemo)', function(formdata){
+	  var url=$('.layui-form').attr('action');
+	  $.ajax({
+		  url:url,
+		type:'POST',
+		dataType:'json',
+		data:formdata.field,
+		 success:function(data){
+			 if(data.code=='200'){
+					layer.msg(data.msg,{icon:1,time:1*1000},function(){
+						var index = parent.layer.getFrameIndex(window.name);
+						parent.layer.close(index);
+					});
+				}else{
+					layer.msg(data.msg,{icon:5});
+
+				}
+         },
+         error:function(data){
+        	 layer.msg('数据发送失败',{icon:5});
+         }
+
+	  });
+
+	  return false;
+  });
+
+});
+</script>
+<!--== 日期选择器== -->
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#datetime', //指定元素
+	type:'datetime'
+  });
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#date', //指定元素
+	type:'date'
+  });
+});
+</script>
+</body>
+</html>

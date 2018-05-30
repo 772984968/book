@@ -1,0 +1,1084 @@
+---------------------------------------------------------------
+[ 2018-03-19T00:30:14+08:00 ] 172.18.79.84 59.110.6.177 GET /
+[ info ] 39.104.1.252:80/ [运行时间：0.030168s][吞吐率：33.15req/s] [内存消耗：2,332.18kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '39.104.1.252:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000439s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000496s ]
+---------------------------------------------------------------
+[ 2018-03-19T08:22:39+08:00 ] 172.18.79.84 59.110.6.177 GET /
+[ info ] 27.151.1.16:80/ [运行时间：0.028307s][吞吐率：35.33req/s] [内存消耗：2,332.17kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '27.151.1.16:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000390s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000384s ]
+---------------------------------------------------------------
+[ 2018-03-19T09:42:34+08:00 ] 172.18.79.84 198.167.142.22 GET /muieblackcat
+[ info ] 39.108.115.229/muieblackcat [运行时间：0.012895s][吞吐率：77.55req/s] [内存消耗：1,141.55kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'muieblackcat',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Close',
+  'host' => '39.108.115.229',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-us',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T13:45:03+08:00 ] 172.18.79.84 120.132.3.65 GET /404/search_children.js
+[ info ] www.qq.com/404/search_children.js [运行时间：0.012790s][吞吐率：78.19req/s] [内存消耗：1,141.91kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => 'search_children.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36',
+  'pragma' => 'no-cache',
+  'accept' => '*/*',
+  'host' => 'www.qq.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T16:20:54+08:00 ] 172.18.79.84 116.62.176.205 GET /
+[ info ] 39.104.9.192:80/ [运行时间：0.028176s][吞吐率：35.49req/s] [内存消耗：2,332.18kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '39.104.9.192:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000379s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000372s ]
+---------------------------------------------------------------
+[ 2018-03-19T16:31:05+08:00 ] 172.18.79.84 180.149.143.26 GET /book/index/hot
+[ info ] 39.108.115.229/book/index/hot [运行时间：0.028729s][吞吐率：34.81req/s] [内存消耗：2,333.09kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'book',
+    1 => 'index',
+    2 => 'hot',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/6.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/8.0 Mobile/10A5376e Safari/8536.25',
+  'accept' => 'text/javascript,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => '39.108.115.229',
+  'accept-encoding' => 'identity',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->hot[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/hot.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000373s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000791s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `zan`  asc,`comment`  desc LIMIT 0,5 [ RunTime:0.000385s ]
+---------------------------------------------------------------
+[ 2018-03-19T16:31:05+08:00 ] 172.18.79.84 180.149.143.153 GET /book/index/index/type/old
+[ info ] 39.108.115.229/book/index/index/type/old [运行时间：0.028412s][吞吐率：35.20req/s] [内存消耗：2,333.84kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'book',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/6.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/8.0 Mobile/10A5376e Safari/8536.25',
+  'accept' => 'text/javascript,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => '39.108.115.229',
+  'accept-encoding' => 'identity',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'old',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000373s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `date`  asc LIMIT 0,5 [ RunTime:0.000372s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:28:44+08:00 ] 172.18.79.84 112.3.203.3 GET /
+[ info ] 39.108.115.229/ [运行时间：0.028339s][吞吐率：35.29req/s] [内存消耗：2,333.46kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000414s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000765s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000360s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:28:53+08:00 ] 172.18.79.84 112.3.203.3 GET /index.php
+[ info ] 39.108.115.229/index.php [运行时间：0.028467s][吞吐率：35.13req/s] [内存消耗：2,334.25kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=1.94610910.1587991.1521466131956.1521466131956.1521466131956; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=1.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000434s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000357s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:29:02+08:00 ] 172.18.79.84 112.3.203.3 GET /admin
+[ info ] 39.108.115.229/admin [运行时间：0.015852s][吞吐率：63.08req/s] [内存消耗：1,499.04kb] [文件加载：46]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:29:02+08:00 ] 172.18.79.84 112.3.203.3 GET /admin/login/index
+[ info ] 39.108.115.229/admin/login/index [运行时间：0.016399s][吞吐率：60.98req/s] [内存消耗：1,536.38kb] [文件加载：47]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\LoginController->index[ /var/www/book/app/admin/controller/LoginController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:29:05+08:00 ] 172.18.79.84 112.3.203.3 GET /captcha
+[ info ] 39.108.115.229/captcha [运行时间：0.012604s][吞吐率：79.34req/s] [内存消耗：1,143.18kb] [文件加载：32]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://39.108.115.229/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /var/www/book/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:29:07+08:00 ] 172.18.79.84 112.3.203.3 GET /admin/login/favicon.ico
+[ info ] 39.108.115.229/admin/login/favicon.ico [运行时间：0.018968s][吞吐率：52.72req/s] [内存消耗：1,536.15kb] [文件加载：48]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://39.108.115.229/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:29:53+08:00 ] 172.18.79.84 58.247.212.98 GET /index.php
+[ info ] 39.108.115.229/index.php [运行时间：0.031871s][吞吐率：31.38req/s] [内存消耗：2,332.42kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000376s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000431s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:29:59+08:00 ] 172.18.79.84 101.226.33.201 GET /index.php
+[ info ] 39.108.115.229/index.php [运行时间：0.028281s][吞吐率：35.36req/s] [内存消耗：2,333.43kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'accept-language' => 'en,*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; MX4 Pro Build/KTU84P) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
+  'referer' => '',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000373s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000824s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000366s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:30:02+08:00 ] 172.18.79.84 120.204.17.73 GET /admin
+[ info ] 39.108.115.229/admin [运行时间：0.018646s][吞吐率：53.63req/s] [内存消耗：1,496.71kb] [文件加载：46]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:30:05+08:00 ] 172.18.79.84 120.204.17.71 GET /captcha
+[ info ] 39.108.115.229/captcha [运行时间：0.013415s][吞吐率：74.54req/s] [内存消耗：1,141.97kb] [文件加载：32]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'referer' => 'http://39.108.115.229/admin/login/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) 			Chrome/55.0.2883.95 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /var/www/book/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:31:05+08:00 ] 172.18.79.84 112.3.203.3 GET /admin/
+[ info ] 39.108.115.229/admin/ [运行时间：0.016115s][吞吐率：62.05req/s] [内存消耗：1,500.11kb] [文件加载：46]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:31:06+08:00 ] 172.18.79.84 112.3.203.3 GET /admin/login/index
+[ info ] 39.108.115.229/admin/login/index [运行时间：0.016276s][吞吐率：61.44req/s] [内存消耗：1,536.51kb] [文件加载：47]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\LoginController->index[ /var/www/book/app/admin/controller/LoginController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:31:06+08:00 ] 172.18.79.84 112.3.203.3 GET /captcha
+[ info ] 39.108.115.229/captcha [运行时间：0.012645s][吞吐率：79.08req/s] [内存消耗：1,143.34kb] [文件加载：32]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://39.108.115.229/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /var/www/book/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:31:36+08:00 ] 172.18.79.84 112.3.203.3 POST /admin/login/login
+[ info ] 39.108.115.229/admin/login/login [运行时间：0.030285s][吞吐率：33.02req/s] [内存消耗：2,437.43kb] [文件加载：54]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://39.108.115.229/admin/login/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://39.108.115.229',
+  'accept' => '*/*',
+  'content-length' => '38',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '1',
+  'captcha' => '1005',
+)
+[ info ] [ RUN ] app\admin\controller\LoginController->login[ /var/www/book/app/admin/controller/LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000382s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_admin` [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SELECT * FROM `b_admin` WHERE  `username` = 'admin'  AND `password` = 'c4ca4238a0b923820dcc509a6f75849b' LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_admin_log` [ RunTime:0.000614s ]
+[ sql ] [ SQL ] INSERT INTO `b_admin_log` (`ip` , `admin_username`) VALUES ('112.3.203.3' , 'admin') [ RunTime:0.002687s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:31:37+08:00 ] 172.18.79.84 112.3.203.3 GET /admin/index/index
+[ info ] 39.108.115.229/admin/index/index [运行时间：0.026381s][吞吐率：37.91req/s] [内存消耗：2,234.65kb] [文件加载：55]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://39.108.115.229/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\IndexController->index[ /var/www/book/app/admin/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/admin/view/index/index.html [ array (
+  0 => 'menu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000410s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_admin` [ RunTime:0.000741s ]
+[ sql ] [ SQL ] SELECT * FROM `b_admin` WHERE  `id` = 35 LIMIT 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_access` [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT * FROM `b_access` [ RunTime:0.000246s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:31:38+08:00 ] 172.18.79.84 112.3.203.3 GET /admin/index/default
+[ info ] 39.108.115.229/admin/index/default [运行时间：0.026742s][吞吐率：37.39req/s] [内存消耗：2,230.96kb] [文件加载：55]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'default',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://39.108.115.229/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\IndexController->default[ /var/www/book/app/admin/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/admin/view/index/default.html [ array (
+  0 => 'menu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000771s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_admin` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT * FROM `b_admin` WHERE  `id` = 35 LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_access` [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT * FROM `b_access` [ RunTime:0.000262s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:31:44+08:00 ] 172.18.79.84 112.3.203.3 GET /admin/index/favicon.ico
+[ info ] 39.108.115.229/admin/index/favicon.ico [运行时间：0.026190s][吞吐率：38.18req/s] [内存消耗：2,208.70kb] [文件加载：56]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://39.108.115.229/admin/index/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000489s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_admin` [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SELECT * FROM `b_admin` WHERE  `id` = 35 LIMIT 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT * FROM `b_admin` WHERE  `id` = 35 LIMIT 1 [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_access` [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT * FROM `b_access` [ RunTime:0.000229s ]
+---------------------------------------------------------------
+[ 2018-03-19T21:32:38+08:00 ] 172.18.79.84 120.204.17.69 GET /admin/index/default
+[ info ] 39.108.115.229/admin/index/default [运行时间：0.016309s][吞吐率：61.32req/s] [内存消耗：1,497.18kb] [文件加载：46]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'default',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'referer' => 'http://39.108.115.229/admin/index/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) 			Chrome/55.0.2883.95 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:37:47+08:00 ] 172.18.79.84 112.3.203.3 GET /aaa
+[ info ] 39.108.115.229/aaa [运行时间：0.012522s][吞吐率：79.86req/s] [内存消耗：1,144.09kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'aaa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=06u5ltqpif5n8kqj1qtm79bda5; _ga=GA1.1.1599790024.1521466132; _gid=GA1.1.1095980499.1521466132; tmc=2.94610910.1587991.1521466131956.1521466131956.1521466135750; tma=94610910.1587991.1521466131956.1521466131956.1521466131956.1; tmd=2.94610910.1587991.1521466131956.; bfd_s=94610910.13239452.1521466131951; bfd_g=ba8002420a011c1f0000a44f0001619e5aafb904',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-19T21:38:47+08:00 ] 172.18.79.84 120.204.17.73 GET /aaa
+[ info ] 39.108.115.229/aaa [运行时间：0.013521s][吞吐率：73.96req/s] [内存消耗：1,142.22kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'aaa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.2141.400 QQBrowser/9.5.10219.400',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

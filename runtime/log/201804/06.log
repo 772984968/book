@@ -1,0 +1,579 @@
+---------------------------------------------------------------
+[ 2018-04-06T00:20:16+08:00 ] 172.18.79.84 114.215.45.79 GET /
+[ info ] 39.104.28.176:80/ [运行时间：0.030715s][吞吐率：32.56req/s] [内存消耗：2,332.11kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '39.104.28.176:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000567s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000845s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000407s ]
+---------------------------------------------------------------
+[ 2018-04-06T02:03:11+08:00 ] 172.18.79.84 120.26.211.148 GET /
+[ info ] 36.224.19.213:80/ [运行时间：0.030474s][吞吐率：32.81req/s] [内存消耗：2,332.11kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '36.224.19.213:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000472s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000844s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000444s ]
+---------------------------------------------------------------
+[ 2018-04-06T04:46:03+08:00 ] 172.18.79.84 80.82.78.50 GET /cache/global/img/gs.gif
+[ info ] www.baidu.com/cache/global/img/gs.gif [运行时间：0.013234s][吞吐率：75.56req/s] [内存消耗：1,141.56kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'cache',
+    1 => 'global',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'if-modified-since' => 'Thu, 19 Apr 2012 09:51:20 GMT',
+  'user-agent' => 'Mozilla',
+  'host' => 'www.baidu.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T08:07:21+08:00 ] 172.18.79.84 120.132.3.65 GET /404/search_children.js
+[ info ] www.qq.com/404/search_children.js [运行时间：0.014275s][吞吐率：70.05req/s] [内存消耗：1,141.91kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => 'search_children.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36',
+  'pragma' => 'no-cache',
+  'accept' => '*/*',
+  'host' => 'www.qq.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T08:23:32+08:00 ] 172.18.79.84 59.110.6.177 GET /
+[ info ] 39.104.30.131:80/ [运行时间：0.029473s][吞吐率：33.93req/s] [内存消耗：2,332.11kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '39.104.30.131:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000427s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000393s ]
+---------------------------------------------------------------
+[ 2018-04-06T09:54:30+08:00 ] 172.18.79.84 59.110.53.10 GET /phpmyadmin
+[ info ] 39.108.115.229/phpmyadmin [运行时间：0.012923s][吞吐率：77.38req/s] [内存消耗：1,141.95kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'phpmyadmin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '39.108.115.229',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)',
+  'referer' => 'http://39.108.115.229/phpmyadmin',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'connection' => 'Keep-Alive',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T09:54:30+08:00 ] 172.18.79.84 59.110.53.10 GET /phpmyadmin
+[ info ] 39.108.115.229/phpmyadmin [运行时间：0.013099s][吞吐率：76.34req/s] [内存消耗：1,141.95kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'phpmyadmin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '39.108.115.229',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)',
+  'referer' => 'http://39.108.115.229/phpmyadmin',
+  'accept-language' => 'zh-cn',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'connection' => 'Keep-Alive',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T10:39:18+08:00 ] 172.18.79.84 71.6.202.198 GET /ccvv
+[ info ] 39.108.115.229/ccvv [运行时间：0.013234s][吞吐率：75.56req/s] [内存消耗：1,141.46kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ccvv',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'user-agent' => 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64)',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T14:35:31+08:00 ] 172.18.79.84 195.22.127.231 GET /.ftpconfig
+[ info ] 39.108.115.229/.ftpconfig [运行时间：0.012751s][吞吐率：78.43req/s] [内存消耗：1,141.92kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '.ftpconfig',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T14:35:31+08:00 ] 172.18.79.84 195.22.127.231 GET /.remote-sync.json
+[ info ] 39.108.115.229/.remote-sync.json [运行时间：0.012799s][吞吐率：78.13req/s] [内存消耗：1,141.94kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '.remote-sync.json',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T14:35:32+08:00 ] 172.18.79.84 195.22.127.231 GET /.vscode/ftp-sync.json
+[ info ] 39.108.115.229/.vscode/ftp-sync.json [运行时间：0.013102s][吞吐率：76.33req/s] [内存消耗：1,142.01kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '.vscode',
+    1 => 'ftp-sync.json',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T14:35:32+08:00 ] 172.18.79.84 195.22.127.231 GET /sftp-config.json
+[ info ] 39.108.115.229/sftp-config.json [运行时间：0.012809s][吞吐率：78.07req/s] [内存消耗：1,141.93kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'sftp-config.json',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T14:35:33+08:00 ] 172.18.79.84 195.22.127.231 GET /deployment-config.json
+[ info ] 39.108.115.229/deployment-config.json [运行时间：0.013417s][吞吐率：74.53req/s] [内存消耗：1,141.97kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'deployment-config.json',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T15:32:41+08:00 ] 172.18.79.84 198.167.140.177 GET /muieblackcat
+[ info ] 39.108.115.229/muieblackcat [运行时间：0.018215s][吞吐率：54.90req/s] [内存消耗：1,141.55kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'muieblackcat',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Close',
+  'host' => '39.108.115.229',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-us',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T16:24:21+08:00 ] 172.18.79.84 59.110.6.177 GET /
+[ info ] 39.104.15.221:80/ [运行时间：0.030722s][吞吐率：32.55req/s] [内存消耗：2,332.11kb] [文件加载：53]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'connection' => 'Close',
+  'host' => '39.104.15.221:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\book\controller\IndexController->index[ /var/www/book/app/book/controller/IndexController.php ]
+[ info ] [ VIEW ] /var/www/book/public/../app/book/view/index/index.html [ array (
+  0 => 'jinhua',
+  1 => 'allsee',
+  2 => 'allhot',
+  3 => 'oldhot',
+  4 => 'data',
+  5 => 'old',
+  6 => 'jinghua',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000453s ] mysql:host=127.0.0.1;dbname=book;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `b_list` [ RunTime:0.000845s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY `comment`  desc LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY zan desc  LIMIT 8 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT * FROM `b_list` WHERE  `type_id` = 2 ORDER BY comment desc  LIMIT 8 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT `l`.*,`u`.*,l.id as detail_id FROM `b_list` `l` INNER JOIN `b_user` `u` ON `l`.`uid`=`u`.`id` WHERE  `status` = 1 ORDER BY `comment`  desc LIMIT 0,5 [ RunTime:0.000414s ]
+---------------------------------------------------------------
+[ 2018-04-06T19:46:53+08:00 ] 172.18.79.84 107.172.210.210 GET /.git/config
+[ info ] 39.108.115.229/.git/config [运行时间：0.013355s][吞吐率：74.88req/s] [内存消耗：1,141.50kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '.git',
+    1 => 'config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'host' => '39.108.115.229',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T23:19:31+08:00 ] 172.18.79.84 47.75.54.55 GET /phpmyadmin/
+[ info ] 39.108.115.229/phpmyadmin/ [运行时间：0.014318s][吞吐率：69.84req/s] [内存消耗：1,141.26kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'phpmyadmin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T23:19:31+08:00 ] 172.18.79.84 47.75.54.55 GET /pmd/
+[ info ] 39.108.115.229/pmd/ [运行时间：0.026271s][吞吐率：38.06req/s] [内存消耗：1,141.23kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pmd',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T23:29:45+08:00 ] 172.18.79.84 39.108.0.91 GET /pmd/
+[ info ] 39.108.115.229/pmd/ [运行时间：0.015495s][吞吐率：64.54req/s] [内存消耗：1,141.23kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pmd',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-06T23:29:45+08:00 ] 172.18.79.84 39.108.0.91 GET /phpmyadmin/
+[ info ] 39.108.115.229/phpmyadmin/ [运行时间：0.026831s][吞吐率：37.27req/s] [内存消耗：1,141.26kb] [文件加载：33]
+[ info ] [ LANG ] /var/www/book/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'phpmyadmin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'host' => '39.108.115.229',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

@@ -1,0 +1,418 @@
+{include file="common/header" voice='cur'/}
+<!--中间内容-->
+<div class="j-content">
+    <div class="g-bd f-cb">
+
+        <div class="j-app-banner" id="j_ad_app" >
+            <script type="text/javascript">
+                /*pc官网顶部*/
+                var cpro_id = "u2606979";
+            </script>
+            <script src="__static__/Scripts/c.js" type="text/javascript"></script>
+        </div>
+
+
+        <div class="g-mn">
+
+
+            <!--坐标内容-->
+            <div class="j-r-c">
+                <!--标签导航-->
+                <!-- type: 1 cate:  - -->
+
+
+                <div class="j-r-nav">
+                    <ul>
+						<li    class="{$jinghua}"><a href="{:url('index/voice')}">精华</a>
+                        </li>
+                        <li class="{$old}"><a href="{:url('index/voice',['type'=>'old'])}">穿越</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!--帖子列表1-->
+                <div class="j-r-list">
+                    <ul>
+
+                        {volist name="data" id="vo" empty="暂时没有数据" }
+
+                        <li>
+
+
+
+                            <!--用户信息-->
+                            <div class="j-list-user">
+                                <div class="u-img">
+                                    <a href="{:url('user/topic',['uid'=>$vo.id])}" target="_blank">
+                                        <img class="u-logo lazy"
+                                             src="__static__/Picture/d_user_logo.jpg"
+                                             data-original="{$vo.head}"
+                                             alt="{$vo.name}"/>
+                                    </a>
+                                </div>
+                                <div class="u-txt">
+                                    <a href="{:url('user/topic',['uid'=>$vo.id])}" class="u-user-name" target="_blank">{$vo.name}</a>
+                                    <span class="u-time  f-ib f-fr">{$vo.date}</span>
+                                </div>
+                            </div>
+
+
+
+                            <div class="j-r-list-c">
+                                <!--因为头像单独占位 所以内容需要 移动 一个头像高度 30px+间距10px -->
+                                <!--描述 段子 直接 只有它 宽度230 高度190-->
+                                <div class="j-r-list-c-desc">
+                                    <a href="{:url('index/detail',['id'=>$vo.detail_id])}">{$vo.biaoti}</a>
+                                </div>
+                                <div class="j-r-list-c-img">
+                                <img src="{$vo.src}">
+                                 <embed src="http://{$vo.src}">
+                            <audio controls="controls" height="100" width="100">
+							<source src="{$vo.voice}" type="audio/mp3" />
+							<source src="song.ogg" type="audio/ogg" />
+							<embed height="100" width="100" src="{$vo.voice}" />
+							</audio>
+                                </div>
+                            </div>
+
+
+
+
+                            <!--操作工具条-->
+                            <div class="j-r-list-tool"
+                                 data-type="10"
+                                 data-video_mlen=""
+                                 data-id="27298511"
+                                 data-title="{$vo.biaoti}"
+                                 data-date="2018-03-09"
+                                 data-time="05:52"
+                                 data-playcount="0"
+                                 data-playfcount="0"
+                            >
+                                <div class="j-r-list-tool-l " data-id="27298511">
+                                    <ul>
+                                        <li class="j-r-list-tool-l-up">
+                                            <i class="icon-up ui-icon-up"></i>&nbsp;&nbsp;<span>{$vo.zan}</span>
+                                        </li>
+                                        <li class="j-r-list-tool-l-down ">
+                                            <i class="icon-down"></i>&nbsp;&nbsp;<span>{$vo.cai}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--分享-->
+                                <div class="j-r-list-tool-ct">
+                                    <div class="j-r-list-tool-ct-share-c">
+                                        <span>分享&nbsp;&nbsp;22&nbsp;&nbsp;</span>
+                                    </div>
+                                    <div class="j-r-list-tool-ct-fx">
+
+                                        <div class="bdsharebuttonbox fx-bd-27298511"
+                                             data-id="27298511"
+
+                                             data-url="/detail-27298511.html"
+                                             data-pic="http://mpic.spriteapp.cn/ugc/2018/03/07/5a9ff3d2cd44a_a_1_1.jpg"
+                                             data-text="诞生地时候爱好上帝 ！">
+                                            <a href="javascript:void(0);" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                            <a href="javascript:void(0);" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                            <a href="javascript:void(0);" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                                            <a href="javascript:void(0);" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                            <a class="bds_more" data-cmd="more"></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- 评论收藏 -->
+                                <div class="j-r-list-tool-r j-r-list-tool-cc">
+                                    <ul>
+
+                                        <li style="display: none" class=" f-tar j-collect j-collect-width  j-collect-down-width">
+                                            <i class="icon-cc"></i>
+                                        </li>
+                                        <li class=" f-tac j-comment j-comment-width  j-comment-down-width">
+
+
+                                            <a href="{:url('index/detail',['id'=>$vo.detail_id])}" class="j-list-comment" target="_blank">
+                                                <i class="icon-comment "></i>&nbsp;<span class="comment-counts">{$vo.comment}</span></a>
+
+
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </li>
+                        {/volist}
+                        <li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <!--分页:  上一页 ... 5 6 7 8 ... 下一页 -->
+            <div class="j-page">
+                {$data->render();}
+            </div>
+
+
+        </div>
+
+        <!--right -->
+        <div class="g-sd">
+
+            <div class="j-l-c">
+              <div class="j-before-day">
+                <a href="{:url('index/detail',['id'=>$vo.detail_id])}"
+                   data-title="{$jinhua.biaoti}"
+                   data-id="27298654"
+                   data-date=""
+                   data-time="">
+                    <div class="icon">
+                        精华推荐
+                    </div>
+                    <div class="main">
+                    {$jinhua.biaoti}
+                    </div>
+                    <div class="img">
+                        <img src="{$jinhua.src}"
+                             title="你家男朋友半夜是..." alt="你家男朋友半夜是..."/>
+                    </div>
+                </a>
+
+        </div>
+                <!--投稿审稿-->
+                <!--投稿-->
+                <div class="j-sent">
+                    <a href="{:url('user/publish')}" onclick="jie.gaSend('pc官网-点击发帖button','点击大发帖button','')" class="left icon-contribute">
+                        <i class="icon-page-contribute"></i>发帖
+                    </a>
+                </div>
+
+
+                <!--大家的在看-->
+
+                <div class="j-r-wrst j-all-like j-r-list j-everyone">
+                    <div class="n-title">
+                        <h2 class="u-tt u-tt-md">好书荐读网友都在看</h2>
+                    </div>
+                    <div class="j-list">
+                        <div class="j-list-c">
+
+{volist name="allsee" id="vo" empty="暂时没有数据" }
+                <div class="j-item">
+                <a href="{:url('index/detail',['id'=>$vo.id])}"
+                data-title="{$vo.biaoti}"
+                data-id="27260416"
+                data-date=""
+                data-time="">
+                <div class="j-item-img">
+                    <img src="{$vo.src}"
+                         class="lazy"
+                         data-original="{$vo.src}"
+                         alt="{$vo.biaoti}"/>
+                    <!--<div class="j-item-play">-->
+                        <!--<i class="icon-play"></i>-->
+                    <!--</div>-->
+                </div>
+                </a>
+                <div class="j-item-des">
+                    <a href="/detail-27260416.html">{$vo.biaoti}</a>
+                </div>
+            </div>
+{/volist}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--近期热门-->
+                <div class="j-r-wrst j-all-like j-r-list j-jq-hot">
+                    <div class="n-title">
+                        <h2 class="u-tt u-tt-md">好书荐读近期热门</h2>
+                    </div>
+                    <div class="j-list">
+                        <div class="j-list-c" >
+{volist name="allhot" id="vo" empty="暂时没有数据" }
+                    <div class="j-item" >
+                        <a href="{:url('index/detail',['id'=>$vo.id])}"
+                            data-title="{$vo.biaoti}"
+                            data-id="27230172"
+                            data-index="7"
+                            data-date="{$vo.date}"
+                            data-time="02:56">
+                            <div class="j-item-img">
+                                <img src="{$vo.src}"
+                                         class="lazy"
+                                         data-original="{$vo.src}" alt="{$vo.biaoti}" />
+
+                                <!--<div class="j-item-play">-->
+                                    <!--<i class="icon-play"></i>-->
+                                <!--</div>-->
+                            </div>
+                        </a>
+                        <div class="j-item-des">
+                            <a href="{:url('index/detail',['id'=>$vo.id])}">{$vo.biaoti}</a>
+                        </div>
+                    </div>
+
+{/volist}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="jDownloadVideo" style="display: none;"></div>
+
+<!--footer -->
+{include file="common/footer"/}
+<script type="text/javascript" src="__static__/layui/layui.all.js"></script>
+<script type="text/javascript">
+    function login(){
+        layer.open({
+            type: 2,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['1000px', '510px'], //宽高
+            content:["{:url('index/login')}", 'no']
+        });
+    }
+
+    function register(){
+        layer.open({
+            type: 2,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['1000px', '650px'], //宽高
+            content:["{:url('index/register')}", 'no']
+        });
+
+    }
+</script>
+<script src="__static__/Scripts/jquery.min.js"></script>
+<script src="__static__/Scripts/underscore-min.js"></script>
+<script src="__static__/Scripts/base.js"></script>
+<script src="__static__/Scripts/jquery.placeholder.min.js"></script>
+<script type="text/javascript"
+        src="__static__/Scripts/cc8d3678eeb44e279f57c3ea2d1e3821.js"></script>
+<script type="text/javascript">
+    var jie = window['jie'] || {};
+    jie['common_config'] = {};
+    jie['is_oauth_login'] = '';
+    jie['is_login_page'] = '';
+    jie.gaSend = function (opt, type, tag) {
+        ga('send', 'event', opt, type, tag);
+    };
+    try {
+        jie['common_config'] = jie_common_config;
+    } catch (e) {
+    }
+</script>
+
+<script src="__static__/Scripts/require.js"></script>
+
+<script type="text/javascript">
+    var INDEXBASEURL = "http://mstatic.spriteapp.cn/xx/1/w3/js/",
+        STATICLAZYSRC = "http://mstatic.spriteapp.cn/xx/1/w3/img/lazyload/",
+        SHAREID = null;
+</script>
+
+<script src="__static__/Scripts/config.js"></script>
+<script id="add2desktopTemp" type="text/template">
+    <section class="j-add-screen">
+        <div id="add2desktop">
+            <i class="icon-cha"></i>
+            <del class="j-a-s-del">╳</del>
+            <div id="a2d-container">
+                <i class="icon-screen-logo"></i><span>【官网】好书荐读，请点击箭头并选择<b>添加至主屏幕</b></span>
+            </div>
+        </div>
+    </section>
+</script>
+
+
+
+<!--百分点代码：列表页-->
+<script type="text/javascript">
+    window["_BFD"] = window["_BFD"] || {};
+    _BFD.BFD_INFO = {
+        "user_id": "0", //网站当前用户id，如果未登录就为0或空字符串
+        "page_type": "list", //当前页面全称，请勿修改
+        "tag": "全部", //标签
+        "valid": "True"
+    };
+</script>
+
+<script type="text/javascript">
+    var _r = window.document.referrer.replace('http://', '');
+    if (_r == '') {
+        _r = 'wulaiyuan';
+    }
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-68700631-3', 'auto', {'sampleRate': 20});
+    // ga('create', 'UA-41454169-10', 'auto');
+    ga('set', 'dimension1', _r);
+    ga('send', 'pageview', {
+        'dimension1': _r
+    });
+
+</script>
+
+<script type="text/javascript">
+    window["_BFD"] = window["_BFD"] || {};
+    _BFD.client_id = "Cbudejie_pc";
+    _BFD.BFD_USER = {
+        "user_id" : 0, //网站当前用户id，如果未登录就为0或空字符串
+        "user_cookie" : jie['common_config']['baifen_cookie'] || '', //网站当前用户的cookie，不管是否登录都需要传
+        "p_id":""   //页面id
+    };
+    _BFD.script = document.createElement("script");
+    _BFD.script.type = "text/javascript";
+    _BFD.script.async = true;
+    _BFD.script.charset = "utf-8";
+    _BFD.script.src = (('https:' == document.location.protocol ? 'https://ssl-static1' : 'http://static1') + '.bfdcdn.com/service/baisibudejie/baisibudejie.js');
+    document.getElementsByTagName("head")[0].appendChild(_BFD.script);
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#showAllLink').on('click', function () {
+            $('.j-contect').removeClass('j-contect-h');
+            $(this).remove();
+        });
+    });
+</script>
+</body>
+</html>

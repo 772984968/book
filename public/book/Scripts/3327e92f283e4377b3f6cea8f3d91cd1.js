@@ -1,0 +1,1 @@
+var jie_common_config = {"new": true, "baifen_cookie": "2f673d5e25be11e8b51ab82a72d03e12"};

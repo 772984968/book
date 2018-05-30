@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+ <script src="__static__/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__static__/js/bootstrap.min.js?v=3.3.6"></script>
+   <script src="__static__/js/plugins/jeditable/jquery.jeditable.js"></script>
+     <script src="__static__/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__static__/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="__static__/js/content.min.js?v=1.0.0"></script>
+</head>
+
+
+<body>
+<table>
+<tr>
+    <th>序号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>联系电话</th>
+    <th>出生年月</th>
+    <th>喜欢颜色</th>
+    <th width="30%">备注</th>
+</tr>
+<tr id="1">
+    <td>1</td>
+    <td class="username" field="username" isempty="0">张三</td>
+    <td class="gender" field="gender">男</td>
+    <td class="phone" field="phone">134564321</td>
+    <td class="birthday" field="birthday">1989-12-13</td>
+    <td ><span class="color" field="color">cccccc</span><span class="colorshow"></span></td>
+    <td class="comment" field="comment">我是屌丝</td>
+</tr>
+<tr id="2">
+    <td>2</td>
+    <td class="username" field="username" isempty="0">李四</td>
+    <td class="gender" field="gender">女</td>
+    <td class="phone" field="phone">134564321</td>
+    <td class="birthday" field="birthday">1990-12-13</td>
+    <td ><span class="color" field="color">bbbb</span><span class="colorshow"></span></td>
+    <td class="comment" field="comment">我是屌丝</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.username').editable("{:url('test/jeditable')}",
+    		{
+        event: 'dblclick',
+        tooltip: '双击编辑...',
+        indicator: '保存中...',
+        submit: '确定',
+        onblur: 'ignore',//方便调试样式
+        // width: '20px',//无效
+        cssclass: 'username',//在css样式中通过.username input{width:60px;}控制input框宽度
+        submitdata: function(value, settings) {
+            $("#tip").text(
+                "id="+$(this).parent().attr('id')+"&"+
+                "field="+$(this).attr('field')+"&"+
+                "isempty="+$(this).attr('isempty')+"&"+
+                "oldvalue="+value
+            );
+            return {
+            	id: $(this).parent().attr('id'), field: $(this).attr('field'), oldvalue: value, isempty: $(this).attr('isempty')};
+            }
+        }
+    );
+});
+
+</script>
+</html>

@@ -1,0 +1,357 @@
+﻿{include file="common/header"/}
+<link rel="stylesheet" href="__static__/Css/contribute.css">
+    <!--中间内容-->
+    <div class="j-content">
+        <div class="g-bd f-cb">
+
+			<form action="{:url('user/voice')}" method="post">
+            <div class="g-mn">
+
+    <div class="j-r-c j-r-tab" id="tabContainer">
+        <!-- tab -->
+        <div class="j-tab">
+            <!-- tab header -->
+            <div class="j-tab-header">
+                <ul>
+                    <li >
+                        <a class="j-t-h-c" href="{:url('user/publish')}">
+                            <i class="icon-video"></i>
+                            <span class="j-t-h-c-des">发视频贴</span>
+                        </a>
+                    </li>
+                    <li  class="j-tab-current"  >
+                        <a class="j-t-h-c" href="{:url('user/voice')}">
+                            <i class="icon-video icon-voice"></i>
+                            <span class="j-t-h-c-des">发声音贴</span>
+                        </a>
+                    </li>
+                    <li  >
+                        <a class="j-t-h-c" href="{:url('user/image')}">
+                            <i class="icon-video icon-pic"></i>
+                            <span class="j-t-h-c-des">发图片贴</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a class="j-t-h-c" href="{:url('user/text')}">
+                            <i class="icon-video icon-text"></i>
+                            <span class="j-t-h-c-des">发文字贴</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- tab content -->
+            <div class="j-tab-c">
+                <div class="j-tab-c-hide j-tab-c-show j-tab-c-text">
+                    <!-- 文件区域 上传图片 视频 音频   -->
+
+                        <!-- 声音   -->
+<!-- 因为多文件同时上传提交操作  所以用 form -->
+<from id="fileUpload">
+    <div class="j-tab-c-file">
+        <div class="j-tab-c-file-c ">
+            <!-- 添加封面图区域   -->
+            <div class="j-tab-c-file-add fileinput-button" id="fileAddBimage">
+                <div class="j-tab-c-file-c-video ">
+                    <i class="icon-file-img"></i>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;添加封面
+                </div>
+                <input type="file" name="image" id="imageUpload" multiple>
+            </div>
+
+            <!-- 添加封面图之后   -->
+            <div class="j-tab-c-file-ing " id="fileBimageC" style="display: none;">
+                   <img src="" id="fileimg" width="170" height="70">
+			<input name="src" value="" type="hidden" id="filesrc">
+            </div>
+
+            <!-- 添加声音区域   -->
+            <div class="j-tab-c-file-add fileinput-button" id="fileAddVoice" style="margin-left: 10px;">
+                <div class="j-tab-c-file-c-video ">
+                    <i class="icon-file-audio"></i>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上传声音
+                </div>
+                <input type="file" name="voice" id="voiceUpload" multiple>
+                	<input name="voice" value="" type="hidden" id="voice">
+            </div>
+
+            <!-- 添加声音之后   -->
+            <div class="j-tab-c-file-ing " id="fileVoiceC" style="margin-left: 10px; display: none;">
+                <div class="j-tab-c-file-ing-l">
+                    <i class="icon-file-audio"></i>
+                </div>
+            </div>
+            <!-- 文件名   -->
+            <div class="j-tab-c-file-des">
+                <p class="j-tab-c-file-des-text" id="txtUploadFileNameImg"></p>
+
+                <p class="j-tab-c-file-des-text" id="txtUploadFileNameVoice" style="margin-left: 10px;"></p>
+            </div>
+        </div>
+    </div>
+
+</from>
+
+
+                    <!-- 描述  -->
+                    <div class="j-tab-c-text-input"
+                            >
+                        <textarea name="biaoti"
+                            placeholder="说点什么...... "
+
+                                 id="textArea"></textarea>
+                    </div>
+
+                    <!-- 标签
+                    <div class="j-tab-c-text-tag">
+                        <div class="j-tab-c-text-recommend">
+                            <span class="j-tab-c-text-tag-h">推荐:</span>
+                            <ul class="j-tab-c-t-t-con" id="listRecommendTags">
+
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- tab button disabled="disabled"  -->
+        <div class="j-tab-button-wrap">
+            <button class="j-tab-button" id="btnSubmit">发表</button>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </div>
+
+
+            </div>
+</form>
+            <!--right -->
+            <div class="g-sd">
+
+    <div class="j-l-c">
+
+        <!--发帖须知-->
+        <div class="j-r-wrst j-all-like j-r-list j-jq-hot j-p-n">
+            <div class="n-title">
+                <h2 class="u-tt u-tt-md">好书荐读发帖须知</h2>
+            </div>
+            <div class="j-list">
+                <div class="j-list-c">
+                    <p class="post-notice">
+                        <span class="p-n-number">1、</span>
+                        <span class="p-n-con">好书荐读是分享快乐的网站，请不要发表无关的内容欺骗小伙伴们的感情啦！</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">2、</span>
+                                    <span class="p-n-con">不能涉及政治、色情、暴力、陪聊等违法
+                                        违规内容，不能包含邮件地址、电话号码、
+                                        地址、QQ、微博等联系信息，不要在本
+                                        站发布广告。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">3、</span>
+                                    <span class="p-n-con">请发布视频、声音、文字和图片，身边的
+                                        搞笑趣事、糗事、随手拍等都可以。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">4、</span>
+                                    <span class="p-n-con">请选择清晰有趣的图片，并且不能包含其
+                                        他网站、微博号等的水印。请勿上传涉嫌
+                                        广告、营销的图片。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">5、</span>
+                        <span class="p-n-con">文字笑话或段子，请提供纯文字。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">6、</span>
+                                    <span class="p-n-con">请勿上传聊天表情图片，虽然好笑，但是
+                                        不适合在不得姐出现哦。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">7、</span>
+                        <span class="p-n-con">请勿提交重复的内容。</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="jDownloadVideo" style="display: none;"></div>
+
+<!--footer -->
+{include file="common/footer"/}
+<script src="__static__/Scripts/jquery.min.js"></script>
+<script src="__static__/Scripts/underscore-min.js"></script>
+<script src="__static__/Scripts/base.js"></script>
+<script src="__static__/Scripts/jquery.placeholder.min.js"></script>
+<script type="text/javascript"
+        src="__static__/Scripts/98335b875a3c409ab9e484e4625b2c9d.js"></script>
+                <!-- 上传接口 -->
+<script type="text/javascript" src="__static__/layui/layui.all.js">
+</script>
+<script type="text/javascript">
+layui.use('upload', function(){
+  var upload = layui.upload;
+  //执行实例
+  var uploadInst = upload.render({
+    elem: '#imageUpload' //绑定元素
+    ,url: "{:url('user/uploadImage')}" //上传接口
+    ,done: function(res){
+        if (res.code==1){
+            layer.msg(res.msg);
+            $("#fileBimageC").css('display','');
+            $("#filesrc").attr('value',res.data.src);
+            $("#fileimg").attr('src',res.data.src);
+             }else{
+              layer.msg(res.msg);
+        }
+           //上传完毕回调
+    }
+   ,accept:'images'
+    ,error: function(){
+        layer.msg('系统错误，上传失败，请重试！');
+           //请求异常回调
+    }
+  });
+});
+</script>
+<script type="text/javascript">
+layui.use('upload', function(){
+  var upload = layui.upload;
+  //执行实例
+  var uploadInst = upload.render({
+    elem: '#voiceUpload' //绑定元素
+    ,url: "{:url('user/uploadVoice')}" //上传接口
+    ,done: function(res){
+        if (res.code==1){
+            layer.msg(res.msg);
+            //$("#fileVoiceC").css('display','');
+            $("#voice").attr('value',res.data.voice);
+           //$("#voice").attr('src',res.data.voice);
+             }else{
+              layer.msg(res.msg);
+        }
+           //上传完毕回调
+    }
+   ,accept:'audio'
+    ,error: function(){
+        layer.msg('系统错误，上传失败，请重试！');
+           //请求异常回调
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var jie = window['jie'] || {};
+    jie['common_config'] = {};
+    jie['is_oauth_login'] = 'True';
+    jie['is_login_page'] = '';
+    jie.gaSend = function (opt, type, tag) {
+        ga('send', 'event', opt, type, tag);
+    };
+    try {
+        jie['common_config'] = jie_common_config;
+    } catch (e) {
+    }
+</script>
+
+    <script src="Scripts/fileupload.js"></script>
+    <script src="Scripts/jquery.blockui.js"></script>
+
+<script src="Scripts/require.js"></script>
+
+    <script type="text/javascript">
+        var INDEXBASEURL = "http://mstatic.spriteapp.cn/xx/1/w3/js/",
+                STATICLAZYSRC = "http://mstatic.spriteapp.cn/xx/1/w3/img/lazyload/",
+                SHAREID = null;
+    </script>
+
+    <script src="Scripts/publish.config.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+    var _r = window.document.referrer.replace('http://', '');
+    if (_r == '') {
+        _r = 'wulaiyuan';
+    }
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-68700631-3', 'auto', {'sampleRate': 20});
+   // ga('create', 'UA-41454169-10', 'auto');
+    ga('set', 'dimension1', _r);
+    ga('send', 'pageview', {
+        'dimension1': _r
+    });
+
+    //百度统计代码
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?7c9f93d0379a9a7eb9fb60319911385f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script type="text/javascript">
+    window["_BFD"] = window["_BFD"] || {};
+    _BFD.client_id = "Cbudejie_pc";
+    _BFD.BFD_USER = {
+        "user_id" : 0, //网站当前用户id，如果未登录就为0或空字符串
+        "user_cookie" : jie['common_config']['baifen_cookie'] || '', //网站当前用户的cookie，不管是否登录都需要传
+        "p_id":""   //页面id
+    };
+    _BFD.script = document.createElement("script");
+    _BFD.script.type = "text/javascript";
+    _BFD.script.async = true;
+    _BFD.script.charset = "utf-8";
+    _BFD.script.src = (('https:' == document.location.protocol ? 'https://ssl-static1' : 'http://static1') + '.bfdcdn.com/service/baisibudejie/baisibudejie.js');
+    document.getElementsByTagName("head")[0].appendChild(_BFD.script);
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#showAllLink').on('click', function () {
+            $('.j-contect').removeClass('j-contect-h');
+            $(this).remove();
+        });
+    });
+</script>
+
+</body>

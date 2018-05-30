@@ -1,0 +1,149 @@
+﻿{include file="common/header"/}
+<link rel="stylesheet" href="__static__/Css/contribute.css">
+
+    <!--中间内容-->
+    <div class="j-content">
+        <div class="g-bd f-cb">
+
+<form action="{:url('user/text')}" method="post">
+            <div class="g-mn">
+
+    <div class="j-r-c j-r-tab" id="tabContainer">
+        <!-- tab -->
+        <div class="j-tab">
+            <!-- tab header -->
+    <div class="j-tab-header">
+                <ul>
+                    <li >
+                        <a class="j-t-h-c" href="{:url('user/publish')}">
+                            <i class="icon-video"></i>
+                            <span class="j-t-h-c-des">发视频贴</span>
+                        </a>
+                    </li>
+                    <li  >
+                        <a class="j-t-h-c" href="{:url('user/voice')}">
+                            <i class="icon-video icon-voice"></i>
+                            <span class="j-t-h-c-des">发声音贴</span>
+                        </a>
+                    </li>
+                    <li  >
+                        <a class="j-t-h-c" href="{:url('user/image')}">
+                            <i class="icon-video icon-pic"></i>
+                            <span class="j-t-h-c-des">发图片贴</span>
+                        </a>
+                    </li>
+                    <li  class="j-tab-current" >
+                        <a class="j-t-h-c" href="{:url('user/text')}">
+                            <i class="icon-video icon-text"></i>
+                            <span class="j-t-h-c-des">发段子</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- tab content -->
+            <div class="j-tab-c">
+                <div class="j-tab-c-hide j-tab-c-show j-tab-c-text">
+                    <!-- 文件区域 上传图片 视频 音频   -->
+
+
+                    <!-- 描述  -->
+                    <div class="j-tab-c-text-input"
+
+                         style="padding-top: 20px;"
+                            >
+                        <textarea name="biaoti"
+                            placeholder="推荐好书......"
+
+                                 id="textArea"></textarea>
+                    </div>
+
+                    <!-- 标签
+                    <div class="j-tab-c-text-tag">
+                        <div class="j-tab-c-text-recommend">
+                            <span class="j-tab-c-text-tag-h">推荐:</span>
+                            <ul class="j-tab-c-t-t-con" id="listRecommendTags">
+
+                            </ul>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <!-- tab button disabled="disabled"  -->
+        <div class="j-tab-button-wrap">
+            <button class="j-tab-button" id="btnSubmit">发表</button>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </div>
+
+
+            </div>
+</form>
+            <!--right -->
+            <div class="g-sd">
+
+    <div class="j-l-c">
+
+        <!--发帖须知-->
+        <div class="j-r-wrst j-all-like j-r-list j-jq-hot j-p-n">
+            <div class="n-title">
+                <h2 class="u-tt u-tt-md">好书荐读发帖须知</h2>
+            </div>
+            <div class="j-list">
+                <div class="j-list-c">
+                    <p class="post-notice">
+                        <span class="p-n-number">1、</span>
+                        <span class="p-n-con">好书荐读是分享快乐的网站，请不要发表无关的内容欺骗小伙伴们的感情啦！</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">2、</span>
+                                    <span class="p-n-con">不能涉及政治、色情、暴力、陪聊等违法
+                                        违规内容，不能包含邮件地址、电话号码、
+                                        地址、QQ、微博等联系信息，不要在本
+                                        站发布广告。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">3、</span>
+                                    <span class="p-n-con">请发布视频、声音、文字和图片，身边的
+                                        搞笑趣事、糗事、随手拍等都可以。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">4、</span>
+                                    <span class="p-n-con">请选择清晰有趣的图片，并且不能包含其
+                                        他网站、微博号等的水印。请勿上传涉嫌
+                                        广告、营销的图片。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">5、</span>
+                        <span class="p-n-con">文字笑话或段子，请提供纯文字。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">6、</span>
+                                    <span class="p-n-con">请勿上传聊天表情图片，虽然好笑，但是
+                                        不适合在不得姐出现哦。</span>
+                    </p>
+
+                    <p class="post-notice">
+                        <span class="p-n-number">7、</span>
+                        <span class="p-n-con">请勿提交重复的内容。</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="jDownloadVideo" style="display: none;"></div>
+
+<!--footer -->
+{include file="common/footer"/}
+</body>

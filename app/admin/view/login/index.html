@@ -1,0 +1,104 @@
+﻿{include file="public/header" title="用户登录"/}
+ <link href="__static__/css/login.min.css" rel="stylesheet">
+  <script src="__static__/js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="__static__/js/plugins/validate/messages_zh.min.js"></script>
+     <script src="__static__/js/plugins/validate/jquery.form.js"></script>
+     <link href="__static__/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+     <script src="__static__/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script>
+        if(window.top!==window.self){window.top.location=window.location};
+    </script>
+<body class="signin">
+    <div class="signinpanel">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="signin-info">
+                    <div class="logopanel m-b">
+                        <h1>[好书荐读后台登录系统 ]</h1>
+                    </div>
+                    <div class="m-b"></div>
+                    <h4>欢迎使用 <strong>后台登录系统</strong></h4>
+                    <ul class="m-b">
+                        <li><i class="fa fa-arrow-circle-o-right m-r-xs"></i>每天进步一点点</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <form method="post" action="{:url('login/login')}" id='loginform' name="form">
+                    <h4 class="no-margins">登录：</h4>
+                    <p class="m-t-md">登录到好书荐读后台</p>
+                    <input type="text" class="form-control uname" placeholder="用户名"  name="username"/>
+                    <input type="password" class="form-control pword m-b" placeholder="密码"  name="password"/>
+                    <input type="text" class="form-control uname m-b" placeholder="验证码"  name="captcha"/>
+                    <img alt="" src="{:captcha_src()}" id='code'>
+                    <a href="#">忘记密码了？</a>
+                    <button class="btn btn-success btn-block">登录</button>
+                </form>
+            </div>
+        </div>
+        <div class="signup-footer">
+            <div class="pull-left">
+                &copy; 2015 All Rights Reserved. H+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function(){
+    	$("img[id='code']").click(function(){
+    		var src=$("img[id='code']");
+    		src.attr('src',src.attr('src')+'?'+new Date().getTime);
+    		});
+
+    	$("#loginform").validate({
+    		rules:{
+    			username:{
+    				required:true,
+    				maxlength:16,
+    			},
+    			password:{
+    				required:true,
+    				maxlength:16
+    			},
+    			captcha:{
+    				required:true,
+    				maxlength:16
+    			},
+    		},
+    		  messages: {
+    			  username: {
+                      required: "请输入用户名",
+                  },
+                  password: {
+                      required: "请输入密码",
+                  },
+                  captcha: {
+                      required: "请输入验证码",
+                  },
+              },
+    		onkeyup:false,
+    		focusCleanup:true,
+    		submitHandler:function(form){
+    			$(form).ajaxSubmit({success: function(data){
+    				if(data.code==200){
+   					 swal({
+   			        	  title: "登录成功！",
+   						  text: "正在跳转...",
+   						  type: "success",
+   						  timer: 2000,
+   			        }, function () {
+   			        	window.location=data.url;
+   			        });
+    				}else{
+    					sweetAlert("哎呦……", data.msg,"error");
+    				}
+    			}});
+    			}
+    	});
+
+    })
+    </script>
+    <script type="text/javascript">
+    </script>
+
+</body>
+</html>
